@@ -5,9 +5,11 @@ import com.jogamp.opengl.util.FPSAnimator;
 import jogamp.opengl.glu.nurbs.CArrayOfArcs;
 
 import javax.swing.*;
+import java.awt.event.KeyListener;
 
 public class Renderer {
-    static int speed = 240;
+    static FPSAnimator animator;
+    static int speed = 60;
 
     final static int WIDTH = 640;
     final static int HEIGHT = 320;
@@ -22,10 +24,10 @@ public class Renderer {
 
 //        window.addGLEventListener(new EventListener());
         canvas.addGLEventListener(new EventListener());
-
+//        canvas.addKeyListener(new KeyControl() );
 //        window.setSize(640, 320);
         canvas.setSize(WIDTH, HEIGHT);
-        FPSAnimator animator = new FPSAnimator(canvas, speed);
+        animator = new FPSAnimator(canvas, speed);
         animator.start();
 
 //        window.setResizable(false);

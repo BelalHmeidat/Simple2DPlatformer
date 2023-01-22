@@ -10,6 +10,7 @@ public class EventListener implements GLEventListener {
         EventListener.gl.glClear(GL.GL_COLOR_BUFFER_BIT); //These two clear the screen for every frame
 
         Obstacle.drawObstacles();
+        Character.runCharacter();
     }
     public void dispose(GLAutoDrawable drawable) {
         //
