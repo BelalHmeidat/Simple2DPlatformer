@@ -34,7 +34,7 @@ public class Obstacle {
         for (int i = 0; i < obstacleList.length; i++) {
 //            newBeginning/=randomInt.nextInt(9);
 
-            newBeginning += i * Renderer.WIDTH/2.0; //random.nextInt(Renderer.WIDTH/2, RANDOM_BOUND);
+            newBeginning += Renderer.WIDTH/2.0; //random.nextInt(Renderer.WIDTH/2, RANDOM_BOUND);
             obstacleList[i] = newBeginning;
             System.out.println(obstacleList[i]);
         }
@@ -49,20 +49,18 @@ public class Obstacle {
         pixelColors = buffer.array();
         return pixelColors;
     }
-    public static void drawObstacle(float obstacleBeginning){
-//        generateNewBeginning();
-
+    public static void drawObstacle(float obstacleBeginning, int obstacleIndex){
         obstacleBeginning+=displacement;
         EventListener.gl.glColor3f(1,1,1);
         EventListener.gl.glBegin(GL2.GL_TRIANGLES);
-//        EventListener.gl.glVertex2f(obstacleBeginning + displacement, OBSTACLE_BOTTOM);
-//        EventListener.gl.glVertex2f(obstacleBeginning + OBSTACLE_TIP_WIDTH + displacement, OBSTACLE_TIP);
-//        EventListener.gl.glVertex2f(obstacleBeginning + OBSTACLE_WIDTH + displacement, OBSTACLE_BOTTOM);
         EventListener.gl.glVertex2f(obstacleBeginning, OBSTACLE_BOTTOM);
         EventListener.gl.glVertex2f(obstacleBeginning + OBSTACLE_TIP_WIDTH, OBSTACLE_TIP);
         EventListener.gl.glVertex2f(obstacleBeginning + OBSTACLE_WIDTH, OBSTACLE_BOTTOM);
         EventListener.gl.glEnd();
-
+        if (obstacleBeginning + OBSTACLE_WIDTH == (Renderer.WIDTH/-2.0) && obstacleIndex == obstacleList.length-1){
+            generateObstacles();
+            displacement = 0;
+        }
     }
 
     public static void drawObstacles(){ //all obstacles
@@ -72,7 +70,7 @@ public class Obstacle {
 //                Obstacle.obstacleList[i] = Obstacle.obstacleList[i] + Obstacle.OBSTACLE_WIDTH;
 //                System.out.println(true);
 //            }
-            drawObstacle(obstacleList[i]);
+            drawObstacle(obstacleList[i], i);
             i++;
 //            if (i == obstacleList.length - 1){
 //
