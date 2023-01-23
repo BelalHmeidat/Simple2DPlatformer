@@ -1,6 +1,8 @@
 import com.jogamp.opengl.GL2ES3;
 
 public class Character {
+    //TODO Fix character speed
+    //TODO Reshape character (circle?)
     static final float X_LOC = -Renderer.WIDTH/2f + 20;
     static final float Y_LOC = Obstacle.OBSTACLE_BOTTOM;
     static final float CHAR_HEIGHT = Math.abs(Obstacle.OBSTACLE_TIP)/2;

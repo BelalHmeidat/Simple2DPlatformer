@@ -7,6 +7,7 @@ import java.util.Random;
 import static com.jogamp.opengl.GL.GL_FLOAT;
 
 public class Obstacle {
+//    TODO Add ceiling
     static float displacement = (float) 0;
     static final float OBSTACLE_TIP = -75;
     static float OBSTACLE_BOTTOM = -150;

@@ -9,7 +9,7 @@ import java.awt.event.KeyListener;
 
 public class Renderer {
     static FPSAnimator animator;
-    static int speed = 60;
+    static int speed = 120;
 
     final static int WIDTH = 640;
     final static int HEIGHT = 320;

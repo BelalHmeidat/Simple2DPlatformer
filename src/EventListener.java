@@ -11,6 +11,7 @@ public class EventListener implements GLEventListener {
 
         Obstacle.drawObstacles();
         Character.runCharacter();
+        Token.drawToken();
     }
     public void dispose(GLAutoDrawable drawable) {
         //
