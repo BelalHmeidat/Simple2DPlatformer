@@ -34,6 +34,7 @@ public class Renderer {
         JFrame frame = new JFrame("Platformer");
         frame.getContentPane().add(canvas);
         frame.setResizable(false);
+        frame.addKeyListener(new KeyControl());
 //        window.setVisible(true);
         frame.setSize(WIDTH, HEIGHT);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

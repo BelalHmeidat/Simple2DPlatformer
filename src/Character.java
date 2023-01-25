@@ -1,15 +1,17 @@
 import com.jogamp.opengl.GL2ES3;
 
+import java.security.Key;
+
 public class Character {
     //TODO Fix character speed
     //TODO Reshape character (circle?)
     static final float X_LOC = -Renderer.WIDTH/2f + 20;
     static final float Y_LOC = Obstacle.OBSTACLE_BOTTOM;
-    static final float CHAR_HEIGHT = Math.abs(Obstacle.OBSTACLE_TIP)/2;
+    static final float CHAR_HEIGHT = Math.abs(-75.0f)/2;
     static final float CHAR_WIDTH = CHAR_HEIGHT;
-    static final float JUMP_LOC = Obstacle.OBSTACLE_TIP + 20;
+    static final float JUMP_LOC = -75 + 20;
     static final int [] CHAR_COLOR = {0,1,0};
-    static final int MAX_JUMP = 100;
+    static final int MAX_JUMP = 130;
     static int status = 1;
     static int charDisplacemnt = 0;
     static float currentLocation = Y_LOC;
@@ -45,7 +47,7 @@ public class Character {
     }
     static void checkLost(){
         System.out.println(currentLocation);
-        if (currentLocation <= Obstacle.OBSTACLE_TIP){
+        if (currentLocation <= Obstacle.OBSTACLE_TIP -10){
             Renderer.animator.pause();
             System.out.println(true);
         }
@@ -61,6 +63,7 @@ public class Character {
                 break;
             default:
                 drawChar(Y_LOC);
+                KeyControl.pressCount = 0;
         }
     }
 }
