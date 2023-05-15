@@ -9,7 +9,7 @@ import static com.jogamp.opengl.GL.GL_FLOAT;
 public class Obstacle {
 //    TODO Add ceiling
     static float displacement = (float) 0;
-    static final float OBSTACLE_TIP = -75;
+    static final float OBSTACLE_TIP = -60;
     static float OBSTACLE_BOTTOM = -150;
     static final float OBSTACLE_WIDTH = 20;
     static final float OBSTACLE_TIP_WIDTH = 10;
@@ -40,7 +40,7 @@ public class Obstacle {
 
             newBeginning += DISTANCE_BETWEEN_OBSTACLES; //random.nextInt(Renderer.WIDTH/2, RANDOM_BOUND);
             obstacleList[i] = newBeginning;
-            System.out.println(obstacleList[i]);
+//            System.out.println(obstacleList[i]);
         }
         Random randRange = new Random();
         int randomObsRange = randRange.nextInt(0, obstacleList.length-2); //the obstacle before last just because it works that way
@@ -49,14 +49,6 @@ public class Obstacle {
 
     }
 
-    static float [] getPixelColor(int xPosition){
-        FloatBuffer buffer = FloatBuffer.allocate(4);
-        EventListener.gl.glReadBuffer(GL.GL_BACK);
-        EventListener.gl.glReadPixels( xPosition, (int) OBSTACLE_BOTTOM, 1,1, GL.GL_RGBA, GL_FLOAT, buffer);
-        float pixelColors [] = new float[3];
-        pixelColors = buffer.array();
-        return pixelColors;
-    }
     public static void drawObstacle(float obstacleBeginning, int obstacleIndex){
         obstacleBeginning+=displacement;
         EventListener.gl.glColor3f(1,1,1);
@@ -95,7 +87,7 @@ public class Obstacle {
 //            System.out.println(true);
 //        }
 
-        displacement +=-1;
+        displacement +=-EventListener.step;
     }
 
 }

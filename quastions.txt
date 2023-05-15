@@ -1,0 +1,120 @@
+Choose the odd number
+128
+14
+16
+17
+4
+Choose the word that does not belong to the group
+Lion
+Tiger
+Chicken
+Jaguar
+3
+What is the name of this course
+Data structures
+Algorithms
+Linux
+Computer Graphics
+4
+Which of the following is not an operating system
+DOS
+IOS
+Windows
+HP
+4
+What is the number of the lecture room
+Masri 202
+Mari 307
+Masri 204
+Masri 102
+1
+What is code of this course
+Comp336
+Comp311
+Comp3321
+Comp333
+3
+What will be the date tomorrow
+13 2 2023
+14 3 2023
+14 2 2023
+14  2 2022
+3
+How many character in the word computer
+6
+7
+9
+8
+4
+Which of the following topics we did not learn in this course
+Bit map
+Midpoint circle algorithm
+Huffman Code algorithm
+Bresenham line algorithm
+3
+what is the office code of Dr iyad jaber
+Masri319
+Masri517
+Aggad101
+Masri 322
+1
+what of  following courses that Dr iyad jaber do not teach in this semester
+Data Structures
+Algorithms
+Computer Graphics
+Linux
+4
+when was the first time that Birzeit University started as university
+1924
+1891
+1974
+1972
+4
+what is the time complexity of bubble sort
+n
+n log n
+n square
+log n
+3
+when did the java programming language come out
+1995
+2000
+2002
+1996
+1
+what is the capital city of Cuba
+Havana
+Buenos Aires
+Caracas
+Montevideo
+1
+which of the following is not a car model
+Volvo
+Mercedes
+VW
+Apple
+4
+what of the following is not programming language
+HTML
+Pascal
+Swift
+C
+1
+what is the last topic that we learned in this course
+3D
+Clipping
+Lighting
+Bresenham line algorithm
+3
+who of the following invented a a line clipping algorithm
+Cohen Suther
+Daived Huffman
+Jack Elton Bresenham
+Ivan Sutherland
+1
+how many prime numbers from one to fifty
+thirteen
+fifteen
+sixteen
+twenty
+2
